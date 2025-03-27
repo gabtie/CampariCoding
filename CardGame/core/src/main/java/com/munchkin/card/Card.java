@@ -1,32 +1,27 @@
 package com.munchkin.card;
 
+import com.munchkin.card.Effect.ActiveEffect;
+import com.munchkin.MunchkinUtils.*;
+
 /**
  * Classe carta generica, contiene tutte le cose in comune
  *
  *
  */
-public abstract class AbstractCard {
+public abstract class Card {
 
-    private String name;
+    protected String name;
 
-    private String description;
+    protected String description;
 
-    public enum CardType {
-        MONSTER,
-        RACE,
-        CLASS,
-        ITEM,
-        CURSE
-    }
+    //effetto che può attivare il player
+    protected ActiveEffect effect;
 
-    public enum CardDeckType {
-        TREASURE,
-        DOOR
-    }
 
-    public AbstractCard(String name, String description) {
+    public Card(String name, String description) {
         this.name = name;
         this.description = description;
+        effect = null;
     }
 
     public abstract CardType getCardType();
@@ -48,5 +43,6 @@ public abstract class AbstractCard {
         this.description = description;
     }
 
+    public boolean hasEffect() {return effect != null;}
 
 }

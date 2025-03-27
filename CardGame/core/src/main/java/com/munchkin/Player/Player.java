@@ -1,7 +1,7 @@
 package com.munchkin.Player;
 
-import com.munchkin.card.AbstractCard;
-import com.munchkin.card.curse.AbstractCurse;
+import com.munchkin.card.Card;
+
 
 import java.util.ArrayList;
 
@@ -20,9 +20,9 @@ public class Player {
 
     private boolean isAlive;
 
-    private ArrayList<AbstractCard> hand;
+    private ArrayList<Card> hand;
 
-    private ArrayList<AbstractCurse> equipped;
+    private ArrayList<Card> equipped;
 
 
     public int calculateAttack() {
