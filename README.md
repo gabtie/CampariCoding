@@ -1,2 +1,2 @@
 # CampariCoding
-a bunch of prevented people who program shit
+a bunch of prevented people who programs shit
